@@ -1,0 +1,110 @@
+{
+  "easy": {
+    "avg_quality": 1.0,
+    "avg_reward": 1.3883,
+    "episodes": [
+      {
+        "task_id": "easy",
+        "steps": 4,
+        "total_reward": 1.3883,
+        "final_quality": 1.0
+      },
+      {
+        "task_id": "easy",
+        "steps": 4,
+        "total_reward": 1.3883,
+        "final_quality": 1.0
+      },
+      {
+        "task_id": "easy",
+        "steps": 4,
+        "total_reward": 1.3883,
+        "final_quality": 1.0
+      },
+      {
+        "task_id": "easy",
+        "steps": 4,
+        "total_reward": 1.3883,
+        "final_quality": 1.0
+      },
+      {
+        "task_id": "easy",
+        "steps": 4,
+        "total_reward": 1.3883,
+        "final_quality": 1.0
+      }
+    ]
+  },
+  "medium": {
+    "avg_quality": 0.7444,
+    "avg_reward": 0.8675,
+    "episodes": [
+      {
+        "task_id": "medium",
+        "steps": 5,
+        "total_reward": 0.8915,
+        "final_quality": 0.7444
+      },
+      {
+        "task_id": "medium",
+        "steps": 4,
+        "total_reward": 0.8815,
+        "final_quality": 0.7444
+      },
+      {
+        "task_id": "medium",
+        "steps": 5,
+        "total_reward": 0.7915,
+        "final_quality": 0.7444
+      },
+      {
+        "task_id": "medium",
+        "steps": 5,
+        "total_reward": 0.8915,
+        "final_quality": 0.7444
+      },
+      {
+        "task_id": "medium",
+        "steps": 4,
+        "total_reward": 0.8815,
+        "final_quality": 0.7444
+      }
+    ]
+  },
+  "hard": {
+    "avg_quality": 0.8375,
+    "avg_reward": 0.9395,
+    "episodes": [
+      {
+        "task_id": "hard",
+        "steps": 7,
+        "total_reward": 0.8075,
+        "final_quality": 0.7375
+      },
+      {
+        "task_id": "hard",
+        "steps": 7,
+        "total_reward": 0.8075,
+        "final_quality": 0.7375
+      },
+      {
+        "task_id": "hard",
+        "steps": 5,
+        "total_reward": 1.1375,
+        "final_quality": 0.9875
+      },
+      {
+        "task_id": "hard",
+        "steps": 5,
+        "total_reward": 1.1375,
+        "final_quality": 0.9875
+      },
+      {
+        "task_id": "hard",
+        "steps": 7,
+        "total_reward": 0.8075,
+        "final_quality": 0.7375
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+name: data-cleaning-env
+version: "1.0.0"
+description: >
+  A real-world OpenEnv environment where AI agents learn to clean messy tabular
+  datasets step-by-step. Simulates the most common daily task in data engineering:
+  handling nulls, type errors, duplicates, inconsistent categories, mixed date
+  formats, and statistical outliers — with dense per-step reward signals.
+
+tags:
+  - openenv
+  - data-cleaning
+  - real-world
+  - tabular
+  - reinforcement-learning
+
+tasks:
+  - id: easy
+    description: Fill missing values and fix wrong column data types
+    difficulty: easy
+    max_steps: 15
+    reward_range: [0.0, 1.0]
+
+  - id: medium
+    description: Remove fuzzy duplicate rows and normalise inconsistent category labels
+    difficulty: medium
+    max_steps: 20
+    reward_range: [0.0, 1.0]
+
+  - id: hard
+    description: >
+      Fix mixed locale date formats, schema violations (strings in numeric columns),
+      and statistical outliers — without over-cleaning valid edge cases
+    difficulty: hard
+    max_steps: 25
+    reward_range: [0.0, 1.0]
+
+actions:
+  - fill_nulls
+  - drop_duplicates
+  - fix_type
+  - normalise_column
+  - drop_column
+  - fix_date_format
+  - clip_outliers
+  - rename_column
+  - submit
+
+observation_space:
+  task_id: string
+  step: integer
+  done: boolean
+  reward: float | null
+  shape: [rows, cols]
+  columns: list of ColumnSummary
+  issues_detected: list of strings
+  data_quality_score: float  # 0.0–1.0
+  message: string
+
+spec_version: "1.0"
+framework: openenv-core
+python: ">=3.10"
+
+deployment:
+  platform: huggingface-spaces
+  dockerfile: server/Dockerfile
+  port: 8000
+  health_endpoint: /health
